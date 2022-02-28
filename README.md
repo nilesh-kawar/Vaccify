@@ -49,7 +49,7 @@ SECRET_KEY =
  
 <h3> Find Vaccine <h/3>
  
-<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/User-Page.png"/>
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/User-New-Page.png"/>
  
 <h3> Admin Dashboard <h/3>
  
@@ -61,7 +61,7 @@ SECRET_KEY =
  
 <h3> Telegram Notification <h/3>
  
-<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/Vaccine%20Slot%20Booking%20Telegram%20Notification.jpg"/>
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/Add%20a%20heading.png"/>
  
  
  Thank you 🙏🏻
