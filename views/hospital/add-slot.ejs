@@ -1,0 +1,103 @@
+<!-- include Admin header -->
+<%- include('../include/_hospitalHeader')%>
+<!-- include Admin header -->
+
+ <!-- Add Vaccien Slots  -->
+ <div class="container mt-3">
+    <h5 class="mb-4">Add Vaccine Slot</h5>
+    <!-- Add Vaccine Slots Form Start  -->
+    <form action="/api/slots" method="post">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-12">
+                <!-- Hidden Fields  -->
+                <input type="hidden" name="hspId" value="<%= req.hospital.hId %>" required >
+                <input type="hidden" name="name" value="<%= req.hospital.name %>" required>
+                <input type="hidden" name="email" value="<%= req.hospital.email %>" required>
+                <input type="hidden" name="state" value="<%= req.hospital.state %>" required>
+                <input type="hidden" name="district" value="<%= req.hospital.district %>" required>
+                <input type="hidden" name="pincode" value="<%= req.hospital.pincode %>" required>
+                <input type="hidden" name="address" value="<%= req.hospital.address %>" required>
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Session ID</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="sesion_id" value="<%= session_id %>" required readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    
+                    <label class="col-sm-3 col-form-label">Date</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="addSlotDate" class="form-control" name="date" placeholder="Date" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Details</label>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <select class="form-control" name="vaccineName" required>
+                                            <option value="">Vaccine</option>
+                                            <option value="covishield">Covishield</option>
+                                            <option value="covaxin">Covaxin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <select class="form-control" name="vaccineType" required>
+                                            <option value="">Fee Type</option>
+                                            <option value="free">Free</option>
+                                            <option value="paid">Paid</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="row">
+                                    <div class="col-sm-12 ">
+                                        <select class="form-control" name="minAge" required>
+                                            <option value="">Minimum Age Limit</option>
+                                            <option>18</option>
+                                            <option>45</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Availablity Doses</label>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input 
+                                type="number" 
+                                class="form-control" 
+                                name="availableDoses"  
+                                placeholder="Number of Available Doses" 
+                                required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="text-center">
+                    <a href="#"><button class="form-btn form-btn-p w-50 my-3">Add Slot</button></a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Add Vaccine Slots Ends  -->
+
+<!-- include Admin Footer -->
+<%- include('../include/_panelFooter')%>
+<!-- include Admin Footer -->

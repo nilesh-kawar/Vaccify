@@ -1,0 +1,44 @@
+<!-- include header -->
+<%- include('include/_header')%>
+<!-- include header -->
+<div class="pt-5 register">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://coronavirus.utah.gov/wp-content/uploads/vaccine_.png?x58403" alt="" style="height:150px;width:150px"/>
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from earning your own money!</p>
+            <a href="/"> <button class="btn" >Homepage</button></a>
+        </div>
+        <div class="col-md-9 register-right">
+           <div class="register-btn-div mt-3">
+                <a class="btn btn-p"  href="/admin-login">Login</a>
+           </div>
+            <div class="container">
+                <h3  class="login-heading">Admin Registration Form</h3>
+                <form action="/api/admin" method="POST">
+                    <div class=" login-form">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email *" value="" name="email" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password *" value="" name="password" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" name="cpassword" required/>
+                            </div>
+                            <div class="text-center">
+                                <a href="#"><button class="btn btn-p mt-3">Register</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- include footer -->
+<%- include('include/_footer')%>
+<!-- include footer -->

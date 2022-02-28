@@ -1,0 +1,45 @@
+<!-- include Admin header -->
+<%- include('../include/_adminHeader')%>
+<!-- include Admin header -->
+
+
+<!--User Details Starts  -->
+<div class="container mt-3">
+    <h5 class="mb-4">Hospitals</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Age</th>
+                <th scope="col" class="text-center">Appointment Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%  for(let i=0; i<user.length;i++){ %>
+              <tr>
+                <th><%= i+1 %></th>
+                <td><%= user[i].firstName +" "+ user[i].lastName %></td>
+                <td><%= user[i].email %></td>
+                <td><%= user[i].phone %></td>
+                <td><%= user[i].gender %></td>
+                <td><%= user[i].age %></td>
+                <td class="text-center">
+                    <span style="background-color: #46fa89;font-weight: 600;padding: 3px 6px;">Booked</span>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--User Details Ends  -->
+
+
+<!-- include Admin Footer -->
+<%- include('../include/_panelFooter')%>
+<!-- include Admin Footer -->

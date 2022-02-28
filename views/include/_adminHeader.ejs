@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= locals.title ? title : "Admin Panel" %></title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+                <strong>AP</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li <% if (page_name === 'admin-dashboard') { %>class="active <% } %>">
+                    <a href="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li <% if (page_name === 'add-hospital') { %>class="active <% } %>">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li <% if (page_name === 'add-hospital') { %>class="active <% } %>">
+                            <a href="add-hospital">Add Hospital</a>
+                        </li>
+                    </ul>
+                </li>
+                <li <% if (page_name === 'all-slots') { %>class="active <% } %>">
+                    <a href="all-slots">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        Available Slots
+                    </a>
+                </li>
+                <li <% if (page_name === 'all-hospitals') { %>class="active <% } %>">
+                    <a href="all-hospitals">
+                        <i class="fas fa-hospital-symbol"></i>
+                        Hospitals
+                    </a>
+                </li>
+                <li <% if (page_name === 'all-users') { %>class="active <% } %>">
+                    <a href="all-users">
+                        <i class="fas fa-users"></i>
+                        Users
+                    </a>
+                </li>
+                <li <% if (page_name === 'telegram') { %>class="active <% } %>">
+                    <a href="#">
+                        <i class="fas fa-paper-plane"></i>
+                        Telegram
+                    </a>
+                </li <% if (page_name === 'data') { %>class="active <% } %>">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-database"></i>
+                        Data
+                    </a>
+                </li>
+                <li>
+                    <hr>
+                    <a href="../">
+                        <i class="fas fa-home"></i>
+                        Homepage
+                    </a>
+                    <a href="/admin-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid d-flex justify-content-start">
+
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-2">
+                        <strong>Vaccine Slot Booking</strong>
+                    </div>
+                </div>
+            </nav>

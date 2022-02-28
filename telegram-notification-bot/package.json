@@ -1,0 +1,25 @@
+{
+  "name": "deploy-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.18.4",
+    "npm": "6.14.6"
+  },
+  "keywords": [],
+  "author": "Nilesh Kawar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "node-schedule": "^2.0.0",
+    "telegraf": "^4.4.0"
+  }
+}

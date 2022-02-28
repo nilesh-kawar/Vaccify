@@ -1,0 +1,93 @@
+<!-- include header -->
+<%- include('include/_header')%>
+<!-- include header -->
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand font-weight-bold primary" href="#">Vaccine Slot Booking</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <% 
+              if (req.cookies.userLogin || req.cookies.adminLogin || req.cookies.hospitalLogin) {
+              %>
+                  <% 
+                  if (req.cookies.userLogin) {
+                  %>
+                  <a href="/logout"><button class="btn"><i class="fas fa-sign-out-alt"></i> Logout User</button></a>
+                  <%
+                  }else if (req.cookies.adminLogin) {
+                  %>
+                  <a href="/admin-logout"><button class="btn"><i class="fas fa-sign-out-alt"></i> Logout Admin</button></a>
+                  <% 
+                  }else if (req.cookies.hospitalLogin) {
+                    %>
+                    <a href="/hospital-logout"><button class="btn"><i class="fas fa-sign-out-alt"></i> Logout Hospital</button></a>
+                    <% 
+                } 
+              }else{
+              %>
+              <div class="dropdown hp-dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user"></i> Login/Register
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="/login"><i class="fas fa-user"></i> User</a>
+                  <a class="dropdown-item" href="/admin-login"><i class="fas fa-user-cog"></i> Admin</a>
+                  <a class="dropdown-item" href="/hospital-login"><i class="fas fa-clinic-medical"></i> Hospital</a>
+                </div>
+              </div>
+              <%}
+              %>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="main">
+      <div class="mt-5 main-div container appointment">
+        <div class="text-center font-weight-bold ">
+          <h2>Your Appointment has been Booked</h2>
+        </div>
+        <div class="mt-5">
+          <table class="table table-borderless">
+            <!-- <thead>
+              <tr>
+                <th scope="col" class="w-25">First</th>
+                <th scope="col" >Last</th>
+              </tr>
+            </thead> -->
+            <tbody>
+              <tr>
+                <td class="w-25 font-weight-bold">Appointment Date</td>
+                <td class="">2022-03-03</td>
+              </tr>
+              <tr>
+                <td class="w-25 font-weight-bold">Vaccine Name</td>
+                <td class="">COVISHIELD</td>
+              </tr>
+              <tr>
+                <td class="w-25 font-weight-bold">Hospital Name:</td>
+                <td class="">Apollo Hospital</td>
+              </tr>
+              <tr>
+                <td class="w-25 font-weight-bold">Hospital Address</td>
+                <td class="">Plot 13, Off Uran Road, Parsik Hill Rd, Sector 23, CBD Belapur, Navi Mumbai, Maharashtra</td>
+              </tr>
+              <tr>
+                <td class="w-25 font-weight-bold">Vaccine Fee Type</td>
+                <td class="">FREE</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-s">Print</button>
+        </div>
+      </div>
+    </div>
+<!-- include footer -->
+<%- include('include/_footer')%>
+<!-- include footer -->
+

@@ -1,0 +1,96 @@
+<!-- include Hospital header -->
+<%- include('../include/_hospitalHeader')%>
+<!-- include Hospital header -->
+
+<!-- Dashboard Starts  -->
+<div class="text-center">
+    <h1 class="font-weight-bold">Welcome, <%= req.hospital.name %></h1>
+</div>
+<div class="dashboard-content container mt-5 pt-3">
+    <div class="row">
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-bottom-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="text-center">
+                        <i class="fas fa-clipboard-list fa-2x mb-3 text-gray-300"></i>
+                        <div class="mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Available Vaccine Slots</div>
+                            <div class="h3 mb-0 mt-2 font-weight-bold text-gray-800">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-bottom-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="text-center">
+                        <i class="fas fa-clipboard-check fa-2x mb-3 text-gray-300"></i>
+                        <div class="mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Booked Vaccine Slots</div>
+                            <div class="h3 mb-0 mt-2 font-weight-bold text-gray-800">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-bottom-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="text-center">
+                        <i class="fas fa-hospital-symbol fa-2x mb-3 text-gray-300"></i>
+                        <div class="mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Pending</div>
+                            <div class="h3 mb-0 mt-2 font-weight-bold text-gray-800">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Vaccinated Users 
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-heartbeat fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Current Appointments Booked</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dashboard Ends  -->
+<!-- include Hospital Footer -->
+<%- include('../include/_panelFooter')%>
+<!-- include Hospital Footer -->

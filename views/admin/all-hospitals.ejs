@@ -1,0 +1,46 @@
+<!-- include Admin header -->
+<%- include('../include/_adminHeader')%>
+<!-- include Admin header -->
+
+<!-- Hospital Details Starts  -->
+<div class="container mt-3">
+    <h5 class="mb-4">Hospitals</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Sate</th>
+                <th scope="col">District</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(let i=0; i<hospital.length;i++){ %>
+              <tr>
+                <th><%= i+1 %></th>
+                <td><%= hospital[i].name %></td>
+                <td><%= hospital[i].email %></td>
+                <td><%= hospital[i].state %></td>
+                <td><%= hospital[i].district %></td>
+                <td><%= hospital[i].pincode %></td>
+                <td>
+                    <a href="edit-hospital?id=<%= hospital[i]._id %>"><button class="btn btn-primary"><i class="fas fa-pencil-alt mr-2"></i>Edit</button></a>
+                </td>
+                <td>
+                    <a href="#"><button class="btn btn-danger"><i class="fas fa-times mr-2"></i>Delete</button></a>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Hospital Details Ends  -->
+<!-- include Admin Footer -->
+<%- include('../include/_panelFooter')%>
+<!-- include Admin Footer -->

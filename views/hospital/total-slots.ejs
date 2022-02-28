@@ -1,0 +1,48 @@
+<!-- include Hospital header -->
+<%- include('../include/_hospitalHeader')%>
+<!-- include Hospital header -->
+
+<!-- Total SLot table Starts  -->
+<div class="container mt-3">
+    <h5 class="mb-4">Total Vaccine Slots</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Vaccine Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Min Age</th>
+                <th scope="col">Available Doses</th>
+                <th scope="col">View Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% 
+                let i = 0;
+                slot.forEach((item) => {
+                item.sessions.forEach((session) => {
+              %>
+              <tr>
+                <th><%= i+1 %></th>
+                <td><%= session.vaccineName %></td>
+                <td><%= session.date %></td>
+                <td><%= session.vaccineType %></td>
+                <td><%= session.minAge %></td>
+                <td><%= session.availableDoses %></td>
+                <td>
+                    <a href="#"><button class="btn btn-primary">View Data</button></a>
+                </td>
+              </tr>
+              <% i++ })
+            }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Total Slots Table Ends  -->
+
+<!-- include Hospital Footer -->
+<%- include('../include/_panelFooter')%>
+<!-- include Hospital Footer -->
