@@ -44,7 +44,25 @@ SECRET_KEY =
  ## Screeshots:
  
 <h3> Homepage<h/3>
+ 
 <img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/1-Homepage.png"/>
+ 
+<h3> Find Vaccine <h/3>
+ 
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/User-Page.png"/>
+ 
+<h3> Admin Dashboard <h/3>
+ 
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/3-1-Admin-Dashboard.png"/>
+ 
+<h3> Hospital Dashboard <h/3>
+ 
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/4-1-Hospital-Dashboard.png"/>
+ 
+<h3> Telegram Notification <h/3>
+ 
+<img src="https://github.com/nilesh-kawar/vaccine-slot-booking-with-notification-system/blob/main/screenshots/Vaccine%20Slot%20Booking%20Telegram%20Notification.jpg"/>
+ 
  
  Thank you 🙏🏻
  
