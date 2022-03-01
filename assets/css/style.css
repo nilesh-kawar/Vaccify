@@ -188,6 +188,11 @@ p {
     color: #495057;
     margin-top: 20px;
 }
+@media screen and (max-width: 500px){
+    .main h1{
+        font-size: 4rem;
+    }
+}
 @media screen and (max-width: 800px) {
     .register-left { display: none; }  
     .register-right {
