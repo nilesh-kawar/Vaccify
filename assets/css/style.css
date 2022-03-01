@@ -41,6 +41,22 @@ p {
     margin-top: 0;
     margin-bottom: 0;
 }
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+.dropdown-item{
+    font-weight: 600;
+}
+.dropdown-menu{
+    border: none;
+    min-width: 190px;
+}
+.dropdown-menu  i{
+    padding-right: 15px;
+}
+
+
+/* [+]Custom Classes -------- */
 .round-btn{
     font-weight: 600;
     padding: 0px 7px;
@@ -62,17 +78,14 @@ p {
 .vname{
     font-weight: 600;
 }
-/* Custom Class ------------------------>*/
 .hidden{
     visibility: hidden;
 }
-
 .appointment h2{
     font-weight: 900;
     color: #4caf50;
     margin-top: 1rem;
 }
-
 .main{
    color: #fff;
 }
@@ -112,23 +125,6 @@ p {
     border-radius: 10px;
     box-shadow: 4px 4px 0px 0px #d2d2d2bb
 }
-
-
-.dropdown:hover>.dropdown-menu{
-    display: block;
-}
-.dropdown-item{
-    font-weight: 600;
-}
-.dropdown-menu{
-    border: none;
-    min-width: 190px;
-}
-.dropdown-menu  i{
-    padding-right: 15px;
-}
-
-
 
 /* [+] Login-register -----------> */
 .register{
@@ -188,11 +184,19 @@ p {
     color: #495057;
     margin-top: 20px;
 }
+
+
+/*[+] Media Queries ------------ */
 @media screen and (max-width: 500px){
     .main h1{
         font-size: 4rem;
     }
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
 }
+
 @media screen and (max-width: 800px) {
     .register-left { display: none; }  
     .register-right {
