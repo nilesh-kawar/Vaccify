@@ -23,7 +23,7 @@ exports.logout = async(req, res) =>{
         res.clearCookie("userLogin");
         console.log("Logout Successfully!!");
         await req.user.save();
-        res.redirect("login");
+        res.redirect("/");
     } catch (err) {
         res.status(500).send(err)
     }

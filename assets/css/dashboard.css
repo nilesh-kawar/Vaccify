@@ -24,6 +24,9 @@ a:focus {
     transition: all 0.3s;
 }
 
+.row select{
+    margin-bottom: 1rem;
+}
 
 .form-btn{
     padding: 10px 20px;
@@ -260,12 +263,17 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
+
+
 @media (max-width: 768px) {
     #sidebar {
         min-width: 80px;
         max-width: 80px;
         text-align: center;
         margin-left: -80px !important;
+    }
+    .hide-mobile{
+        display: none;
     }
     .dropdown-toggle::after {
         top: auto;

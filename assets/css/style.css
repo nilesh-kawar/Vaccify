@@ -185,6 +185,7 @@ p {
 
 
 /*[+] Media Queries ------------ */
+/* Mobile Screen  */
 @media screen and (max-width: 500px){
     .main h1{
         font-size: 4rem;
@@ -198,6 +199,7 @@ p {
         margin-top: -1rem!important;
     }
 }
+/* Desktop  */
 @media screen and (min-width: 500px){
     .dropdown:hover>.dropdown-menu{
         display: block;
