@@ -41,9 +41,7 @@ p {
     margin-top: 0;
     margin-bottom: 0;
 }
-.dropdown:hover>.dropdown-menu{
-    display: block;
-}
+
 .dropdown-item{
     font-weight: 600;
 }
@@ -195,12 +193,22 @@ p {
         text-align: center;
         margin-top: 1rem;
     }
+    .register-btn-div{
+        margin-right: 1rem;
+        margin-top: -1rem!important;
+    }
 }
-
+@media screen and (min-width: 500px){
+    .dropdown:hover>.dropdown-menu{
+        display: block;
+    }
+}
 @media screen and (max-width: 800px) {
-    .register-left { display: none; }  
+    .register-left, .hidden { display: none; }  
     .register-right {
         border-radius: 5%;
+        margin-top: 5rem;
+        padding: 2rem 0;
     }
     .register-heading{
         margin-top: 25px;
@@ -211,5 +219,11 @@ p {
     }
     .register .login-form{
         padding: 1%;
+    }
+    .selectDiv{
+        padding: 2rem;
+    }
+    .showSlots button{
+        font-size: 13px;
     }
 }
