@@ -3,7 +3,7 @@ const axios = require('axios');
 
 //[+] User Routes:
 exports.homeRoutes = (req, res) => {
-    res.render('index',{ title: 'Homepage', req: req});
+    res.render('index',{ title: 'Vaccify - Homepage', req: req});
 }
 exports.login = (req, res) =>{
     res.render('login', { title: 'Login' });
